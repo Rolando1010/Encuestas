@@ -40,7 +40,7 @@
 
             {% if pregunta.seleccion %}
                 <select name="respuestas" class="form-select entrada respuesta mx-auto" required>
-                    <option selected disabled="true" value="">Escoje el tipo de la pregunta</option>
+                    <option selected disabled="true" value="">Escoje la respuesta a la pregunta</option>
                     {% for respuesta in pregunta.respuestas%}
                         <option value="{{respuesta}}">{{respuesta}}</option>
                     {% endfor %}
