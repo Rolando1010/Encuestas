@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Encuestas Respondidas{% endblock %}
+
+{% block opciones-menu %}
+    {% include "opciones-menu-cliente.html" %}
+{% endblock %}
+
+{% block contenido %}
+    <h2 class="titulo">Encuestas Respondidas</h2>
+    {% include "tabla.html" %}
+{% endblock %}
+
+{% block js%}
+    <script>
+        var encuestas = "{{encuestas|safe}}"
+    </script>
+    <script src="{% static 'js/cargar-encuestas-respondidas.js' %}"></script>
+{% endblock %}

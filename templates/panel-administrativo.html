@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Panel Administrativo{% endblock %}
+
+{% block menu %}{% endblock %}
+
+{% block contenido %}
+    <div class="contenedor-oscuro">
+        <a href="/ingreso-admin" class="btn-salir"><button class="btn boton btn-opcion-usuario">Salir</button></a>
+        <h2 class="titulo">Panel Administrativo</h2>
+        <a href="panel-administrativo/crear-encuesta" class="btn-crear-encuesta"><button class="btn boton btn-opcion-usuario">Crear Encuesta</button></a>
+        {% include "tabla.html" %}
+    </div>
+    <script src="{% static 'js/encuestas-admin.js' %}"></script> 
+{% endblock %}

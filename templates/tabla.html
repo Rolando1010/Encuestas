@@ -1,0 +1,21 @@
+<table class="tabla table table-dark table-hover table-bordered mx-auto">
+    <thead>
+        <tr>
+            <th class="titulo-tabla" colspan={{cantSubtitulos}}>{{Titulo}}</th>
+        </tr>
+        <tr>
+            {% for subtitulo in subtitulos %}
+                <th class="titulo-tabla">{{subtitulo}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody class="contenido-tabla">
+        {% for fila in filas %}
+            <tr>
+                {% for celda in fila %}
+                    <td class="celda">{{celda}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

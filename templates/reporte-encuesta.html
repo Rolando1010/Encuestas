@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block titulo %}Reporte de Encuestas{% endblock %}
+
+{% block menu %}<a href="../../panel-administrativo" class="btn-salir btn-salir-creacion-encuesta"><button class="btn boton">Salir</button></a>{% endblock %}
+
+{% block contenido %}
+    <div class="contenedor-oscuro">
+        <h2 class="titulo">Reporte de encuesta {{nombre}}</h2>
+        <h4 class="sub-titulo">Descripcion: {{descripcion}}</h4>
+        <h4 class="sub-titulo">La encuesta ha sido respondida {{respuestas_encuesta}} veces</h4>
+
+        {% for pregunta in preguntas %}
+            <button class="btn boton mb-10 dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample{{pregunta.num}}" aria-expanded="false" aria-controls="multiCollapseExample{{pregunta.num}}">Respuestas a pregunta {{pregunta.pregunta}}</button>
+            <div class="col mb-10">
+                <div class="collapse multi-collapse" id="multiCollapseExample{{pregunta.num}}">
+                    <div class="card card-body">
+                        <ol class="list-group list-group-numbered">
+							{% for respuesta in pregunta.respuestas %}
+								<li class="list-group-item d-flex justify-content-between align-items-start borde-morado">
+									<div class="ms-2 me-auto">
+										<div class="fw-bold">{{respuesta.respuesta}}</div>
+									</div>
+									<span class="badge bg-primary rounded-pill fondo-negro">Repetida {{respuesta.repeticion}} veces</span>
+								</li>
+							{% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

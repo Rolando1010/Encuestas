@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{accion}} de {{usuario}}{% endblock %}
+
+{% block opciones-menu %}
+    <a href="{% url 'ingreso-admin' %}"><button class="btn btn-outline-success boton btn-opcion-usuario">Panel Administrativo</button></a>
+    <a href="{% url 'ingreso-cliente' %}"><button class="btn btn-outline-success boton btn-opcion-usuario">Clientes</button></a>
+{% endblock %}
+
+{% block contenido %}
+    {% if alerta %}
+        <div class="alert alert-{{alerta}}" role="alert">{{resultado}}</div>
+    {% endif %}
+    <h2 class="titulo">{{accion}} de {{usuario}}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="correo" required type="email" placeholder="Correo" class="form-control entrada mx-auto">
+        <input name="contrasenna" autocomplete="off" required type="password" placeholder="Contraseña" class="form-control entrada mx-auto">
+        <button class="btn boton btn-ingreso">{{accion}}</button>
+    </form>
+    {% if registro %}
+        <a href="{{registro}}"><button class="btn boton btn-enlace">No estás registrado? Regístrate</button></a>
+    {% endif %}    
+{% endblock %}

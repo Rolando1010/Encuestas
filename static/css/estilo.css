@@ -1,0 +1,209 @@
+body{
+    background-color: #353535;
+}
+
+.menu{
+    padding: 20px;
+    background-color: #212529 !important;
+    border-bottom: 2px solid rgba(128, 0, 128, 0.377);
+}
+
+.titulo-menu{
+    color: #ffffff !important;
+}
+
+.btn-opcion-usuario{
+    margin-left: 20px;
+}
+
+.boton{
+    margin-left: 20px;
+    border: 2px solid rgba(168, 2, 168, 0.377);
+    color: #ffffff;
+}
+
+.boton:hover{
+    background-color: rgba(168, 2, 168, 0.377);
+    border-color: rgba(168, 2, 168, 0.377);
+    color: #ffffff;
+}
+
+.boton:focus{
+    box-shadow: 0 0 0 0.25rem rgb(117 19 99 / 50%);
+}
+
+.boton:active{
+    box-shadow: 0 0 0 0.25rem rgb(117 19 99 / 50%);
+    background-color: rgba(168, 2, 168, 0.377);
+    border-color: rgba(168, 2, 168, 0.377);
+}
+
+.seleccion{
+    border: 2px solid rgba(168, 2, 168, 0.377);
+}
+
+.seleccion:hover{
+    border-color: rgba(168, 2, 168, 0.377);
+}
+
+.seleccion:focus{
+    border-color: rgba(168, 2, 168, 0.377);
+    box-shadow: 0 0 0 0.25rem rgb(117 19 99 / 50%);
+}
+
+.seleccion:active{
+    box-shadow: 0 0 0 0.25rem rgb(117 19 99 / 50%);
+    border-color: rgba(168, 2, 168, 0.377);
+}
+
+.seleccion:focus-visible{
+    outline: none;
+}
+
+.titulo{
+    color: #ffffff;
+}
+
+.sub-titulo{
+    margin: 30px 0px 40px 0px;
+    color: #ffffff;
+}
+
+.contenedor{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.entrada{
+    margin-top: 30px !important;
+    width: 60%;
+    padding: 10px 30px;
+}
+
+.entrada:focus{
+    border-color: rgba(168, 2, 168, 0.377);
+    box-shadow: 0 0 0 0.25rem rgb(168 2 168 / 37%);
+}
+
+.btn-ingreso{
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+.btn-enlace{
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.btn-salir{
+    float: right;
+}
+
+.tabla{
+    margin-top: 30px;
+}
+
+.btn-crear-encuesta{
+    margin-bottom: 20px;
+    float: left;
+}
+
+.select-tipo-pregunta{
+    width: auto;
+    cursor: pointer;
+}
+
+.contenedor-oscuro{
+    background-color: #212529;
+    border: 2px solid rgba(168, 2, 168, 0.377);
+    padding: 20px;
+}
+
+.contenedor-creacion-encuesta{
+    padding: 20px;
+}
+
+.contenedor-creacion-encuesta *{
+    margin: 20px;
+}
+
+.txt-dato-encuesta{
+    width: 60%;
+}
+
+.btn-salir-creacion-encuesta{
+    margin: 10px 10px 0px 0px;
+    margin-top: -45px;
+}
+
+.tabla{
+    border-color: #353535;
+}
+
+.titulo-tabla{
+    background-color: rgba(168, 2, 168, 0.377) !important;
+    border-width: 2px !important;
+    border-color: #353535 !important;
+}
+
+.celda{
+    border: 2px solid rgba(168, 2, 168, 0.377) !important;
+}
+
+.divisor{
+    border-bottom: 2px solid rgba(168, 2, 168, 0.377) !important;
+}
+
+.oculto{
+    display: none !important;
+}
+
+.lbl-respuestas{
+    color: #ffffff;
+}
+
+.tarjetas-encuestas{
+    margin-top: 55px;
+}
+
+.tarjeta-encuesta{
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.cuerpo-tarjeta-encuesta{
+    background-color: #212529 !important;
+}
+
+.cuerpo-tarjeta-encuesta:hover{
+    background-color: #353535 !important;
+}
+
+.contenido-tarjeta-encuesta{
+    border-width: 0px;
+    box-shadow: 1px 1px 20px 0px rgb(102 35 102)
+}
+
+.respuesta{
+    margin-bottom: 50px;
+}
+
+.btn-respuesta{
+    margin-top: 50px;
+    width: 60%;
+    padding: 20px 0px;
+    font-size: 20px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.fondo-negro{
+    background-color: #212529 !important;
+}
+
+.borde-morado{
+    border: 2px solid rgb(93 2 168 / 83%);
+}

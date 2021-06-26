@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %}Encuestas{% endblock %}
+
+{% block opciones-menu %}
+    {% include "opciones-menu-cliente.html" %}
+{% endblock %}
+
+{% block contenido %}
+    <h2 class="titulo">Encuestas</h2>
+    <div class="row tarjetas-encuestas">
+        {% for encuesta in encuestas %}
+            <div class="col-sm-6 tarjeta-encuesta">
+                <div class="card contenido-tarjeta-encuesta">
+                    <div class="card-body cuerpo-tarjeta-encuesta">
+                        <h5 class="card-title">{{encuesta.nombre}}</h5>
+                        <p class="card-text">{{encuesta.descripcion}}</p>
+                        <a href="encuestas-cliente/{{encuesta.codigo}}" class="btn boton">Responder Encuesta</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

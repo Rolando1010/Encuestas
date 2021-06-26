@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}Creación de Encuesta{% endblock %}
+
+{% block menu %}<a href="../panel-administrativo" class="btn-salir btn-salir-creacion-encuesta"><button class="btn boton">Salir</button></a>{% endblock %}
+
+{% block contenido %}
+    <div class="contenedor-oscuro">
+        <div class="alerta-encuesta">
+            {% if encuesta_insertada %}
+                <div class="alert alert-success" role="alert">Encuesta creada exitosamente</div>
+            {% endif %}
+        </div>
+        <h2 class="titulo">Creación de Encuesta</h2>
+        <div class="contenedor-creacion-encuesta">
+            <form method="POST">
+                {% csrf_token %}
+                <input name="nombre" type="text" class="form-control entrada txt-dato-encuesta txt-nombre-encuesta mx-auto" placeholder="Ingrese el nombre de la encuesta">
+                <textarea name="descripcion" class="form-control entrada txt-dato-encuesta mx-auto txt-descripcion-encuesta" placeholder="Ingrese una descripción para la encuesta"></textarea>
+                <input name="preguntas" type="text" class="oculto preguntas">
+                <div class="divisor"></div>
+                <div class="alerta-pregunta"></div>
+                <h4 class="titulo">Creación de Pregunta</h4>
+                <input type="text" class="form-control entrada txt-dato-encuesta txt-pregunta mx-auto" placeholder="Ingrese la pregunta">
+                <select class="form-select entrada mx-auto select-tipo-pregunta" aria-label="Default select example">
+                    <option selected disabled="true">Escoje el tipo de la pregunta</option>
+                    <option value="Texto">Texto</option>
+                    <option value="Selección">Selección</option>
+                </select>
+                <p class="lbl-respuestas oculto">Respuestas:</p>
+                <input type="text" class="form-control seleccion txt-opcion-respuesta mx-auto oculto" placeholder="Ingrese la posible respuesta ">
+                <button class="btn d-block mx-auto boton btn-agregar-respuesta oculto">Agregar Respuesta</button>
+                <button class="btn boton btn-crear-pregunta">Crear Pregunta</button>
+                <div class="divisor"></div>
+                <button class="btn boton btn-creacion-encuesta">Crear Encuesta</button>
+            </form>
+            <div class="divisor"></div>
+            {% include "tabla.html" %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/creacion-encuesta.js' %}"></script>
+{% endblock %}
